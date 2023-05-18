@@ -40,7 +40,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <body className="flex">
+        <body className="flex flex-col">
           <>
             <TopBar showNav={showNav} setShowNav={setShowNav} />
             <Transition
