@@ -14,7 +14,7 @@ const Profile = () => {
   // getData();
 
   return (
-    <main className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center">
       <div className="  top-0 w-[100%] h-[21rem] bg-center bg-hero-image"></div>
 
       <section className="bg-blueGray-200 ">
@@ -143,7 +143,7 @@ const Profile = () => {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 };
 

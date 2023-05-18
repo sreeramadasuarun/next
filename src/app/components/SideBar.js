@@ -36,17 +36,17 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                     <>
                       <a
                         href="/profile"
-                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
                       </a>
                       <a
                         href="/login"
-                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
-                        <span className="font-semibold ml-5"> LogIN</span>
+                        <span className="font-semibold ml-5"> Login</span>
                       </a>
                     </>
                   }
@@ -55,14 +55,14 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                     <>
                       <a
                         href="/"
-                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
                       </a>
                       <a
                         href="/employees"
-                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscArchive />
                         <span className="font-semibold ml-5">Employees</span>
@@ -75,21 +75,21 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                     <>
                       <a
                         href="/"
-                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
                       </a>
                       <a
                         href="/employees"
-                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscArchive />
                         <span className="font-semibold ml-5">Employees</span>
                       </a>
                       <a
                         href="/teamleader"
-                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
+                        className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscGear />
                         <span className="font-semibold ml-5">Team Leaders</span>
