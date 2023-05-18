@@ -1,6 +1,7 @@
+"use client";
 import React, { useState } from "react";
 // import { useUserAuth } from "../routes/login/UserAuthContext";
-// import userpic from "../assets/images/userpic.avif";
+// import userpic from "../../assets/images/userpic.jpg";
 // import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
@@ -13,13 +14,13 @@ const Profile = () => {
   // getData();
 
   return (
-    <div className="relative mt-[3.8rem]">
-      <main className="absolute inset-y-0 right-0 w-[81rem]">
+    <div className="">
+      <main className="">
         <div className="  top-0 w-[100%] h-[21rem] bg-center bg-hero-image"></div>
 
         <section className="bg-blueGray-200 ">
           <div className="flex flex-col justify-center items-center">
-            <div className="w-[67rem] flex flex-col min-w-0 break-words bg-white mb-6 shadow-xl rounded-lg -mt-64">
+            <div className=" flex flex-col min-w-0 break-words bg-white mb-6 shadow-xl rounded-lg -mt-64">
               <div className="flex justify-center items-center gap-[5rem] mt-10">
                 {/* <img
                   className="w-[12rem] rounded-2xl	 "
