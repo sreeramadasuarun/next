@@ -48,7 +48,7 @@ const Navbar = () => {
                 {
                   <>
                     <a
-                      href="/"
+                      href="/profile"
                       className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-5 px-3"
                     >
                       <VscPersonAdd />

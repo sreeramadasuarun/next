@@ -2,7 +2,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "./navbar";
-// import PrivateRoute from "../pages/PrivateRoute";
+// import PrivateRoute from "../pages/PrivateRoute"; {/* <PrivateRoute> */}            {/* </PrivateRoute> */}
+
 import { UserAuthContextProvider } from "../pages/UserAuthContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,9 +19,8 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className="flex flex-col">
           <UserAuthContextProvider>
-            {/* <PrivateRoute> */} <Navbar />
+            <Navbar />
             {children}
-            {/* </PrivateRoute> */}
           </UserAuthContextProvider>
         </body>
       </html>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Navigate } from "react-router-dom";
-import { useUserAuth } from "../pages/UserAuthContext";
+import { useUserAuth } from "./UserAuthContext";
 
 function PrivateRoute({ children }) {
   const { user } = useUserAuth();
