@@ -1,8 +1,7 @@
-"use client";
+import React from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import SideBar from "./components/SideBar";
-import React from "react";
 import TopBar from "./components/TopBar";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,9 +19,10 @@ export default function RootLayout({ children }) {
           <>
             <TopBar />
             <SideBar />
-            <main className="pt-16 pl-56 transition-all duration-[400ms]">
-              <div>{children}</div>
-            </main>
+
+            <div className="pt-16 pl-56 transition-all duration-[400ms]">
+              {children}
+            </div>
           </>
         </body>
       </html>
