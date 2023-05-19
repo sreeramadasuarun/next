@@ -13,7 +13,7 @@ import { useUserAuth } from "../components/UserAuthContext";
 
 export default function TopBar({ showNav, setShowNav }) {
   const { user, show, getData, logOut } = useUserAuth();
-  getData();
+  // getData();
 
   return (
     <div
