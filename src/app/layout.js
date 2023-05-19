@@ -27,6 +27,9 @@ export default function RootLayout({ children }) {
       setIsMobile(false);
     }
   }
+  useEffect(() => {
+    <TopBar />;
+  });
 
   useEffect(() => {
     if (typeof window != undefined) {
@@ -41,8 +44,8 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <UserAuthContextProvider>
-          <body className="flex flex-col">
+        <body className="flex flex-col">
+          <UserAuthContextProvider>
             <>
               <TopBar showNav={showNav} setShowNav={setShowNav} />
               <Transition
@@ -66,8 +69,8 @@ export default function RootLayout({ children }) {
             >
               {children}
             </main>
-          </body>
-        </UserAuthContextProvider>
+          </UserAuthContextProvider>
+        </body>
       </html>
     </>
   );

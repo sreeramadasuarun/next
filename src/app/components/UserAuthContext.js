@@ -10,13 +10,13 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth, database } from "./firebase";
-import { collection, setDoc, doc, getDocs } from "firebase/firestore";
+import { collection, setDoc, getDocs, doc, getDoc } from "firebase/firestore";
 
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
-  console.log(user);
+
   const collectRef = collection(database, "users");
   // // const q = query(collectRef, where(id, "==", user.uid));
   // // console.log(user.uid);
@@ -62,35 +62,18 @@ export function UserAuthContextProvider({ children }) {
   // getData();
   // useEffect(() => {}, []);
 
-  const [show, setShow] = useState("");
-
-  const getData = () => {
-    const docRef = collection(database, "users");
-
-    getDocs(docRef).then((response) => {
-      const getfrom = response.docs.map((item) => {
-        return { ...item.data(), key: item.id };
-      });
-      setShow(getfrom);
-    });
-  };
-
-  // console.log(show);
-  // useEffect(() => {}, []);
-  getData();
-
   //.........  //pull from firebase
 
-  // const [show, setShow] = useState("");
+  const [show, setShow] = useState("");
 
-  // async function getData() {
-  //   const docRef = doc(database, "users", user.uid);
-  //   const docSnap = await getDoc(docRef);
-  //   setShow(docSnap.data());
-  //   console.log("Document data:", docSnap.data());
-  // }
-
-  // getData();
+  async function getData() {
+    const docRef = doc(database, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    setShow(docSnap.data());
+    // console.log("Document data:", docSnap.data());
+  }
+  console.log(show);
+  getData();
   // useEffect(() => {
   //   setInterval(() => {
   //   }, 1500);
@@ -132,8 +115,8 @@ export function UserAuthContextProvider({ children }) {
   return (
     <userAuthContext.Provider
       value={{
-        getData,
         show,
+        getData,
         handleSubmit,
         user,
         logIn,

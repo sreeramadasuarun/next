@@ -9,7 +9,10 @@ const Profile = () => {
 
   const { user, show, getData } = useUserAuth();
   getData();
+
   console.log(show);
+  console.log(show.fullname);
+
   return (
     <div className="flex flex-col justify-center items-center text-gray-800">
       <div className="  top-0 w-[100%] h-[21rem] bg-center bg-hero-image"></div>
