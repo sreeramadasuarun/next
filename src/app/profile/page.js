@@ -1,31 +1,30 @@
 "use client";
 import React, { useState } from "react";
-// import { useUserAuth } from "../routes/login/UserAuthContext";
-// import userpic from "../../assets/images/userpic.jpg";
-// import { useNavigate } from "react-router-dom";
+import { useUserAuth } from "../components/UserAuthContext";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const Profile = () => {
-  const [user, setasdas] = useState(true);
-  const [show, setdasdas] = useState(true);
+  const router = useRouter();
 
-  // const navigate = useNavigate();
-
-  // const { user, show, getData } = useUserAuth();
-  // getData();
-
+  const { user, show, getData } = useUserAuth();
+  getData();
+  console.log(show);
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center text-gray-800">
       <div className="  top-0 w-[100%] h-[21rem] bg-center bg-hero-image"></div>
 
       <section className="bg-blueGray-200 ">
         <div className="flex flex-col justify-center items-center">
           <div className=" flex flex-col min-w-0 break-words bg-white mb-6 shadow-xl rounded-lg -mt-64">
             <div className="flex justify-center items-center gap-[5rem] mt-10">
-              {/* <img
-                  className="w-[12rem] rounded-2xl	 "
-                  src={userpic}
-                  alt="noimagefound"
-                /> */}
+              <Image
+                src="/userpic.jpg"
+                width={150}
+                height={100}
+                alt="Picture of the author"
+              />
+              {/* <img src="" alt="" srcset="" /> */}
               <div className="text-left ">
                 <h3 className="text-4xl font-semibold leading-normal text-blueGray-700 ">
                   {user
@@ -52,7 +51,7 @@ const Profile = () => {
                 <div className="text-sm leading-normal text-blueGray-400 font-bold uppercase">
                   {user ? (
                     <div
-                      onClick={() => navigate("/formsdetails")}
+                      onClick={() => router.push("/formsdetails")}
                       className="text-blue-500 cursor-pointer 	"
                     >
                       Update details
