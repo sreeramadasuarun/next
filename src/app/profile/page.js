@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useUserAuth } from "../components/UserAuthContext";
-import Image from "next/image";
+// import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const Profile = () => {
@@ -9,8 +9,8 @@ const Profile = () => {
 
   const { user, show } = useUserAuth();
 
-  console.log(show);
-  console.log(show.fullname);
+  // console.log(show);
+  // console.log(show.fullname);
 
   return (
     <div className="flex flex-col justify-center items-center text-gray-800">
@@ -20,12 +20,12 @@ const Profile = () => {
         <div className="flex flex-col justify-center items-center">
           <div className=" flex flex-col min-w-0 break-words bg-white mb-6 shadow-xl rounded-lg -mt-64">
             <div className="flex justify-center items-center gap-[5rem] mt-10">
-              <Image
+              {/* <Image
                 src="/userpic.jpg"
                 width={150}
                 height={100}
                 alt="Picture of the author"
-              />
+              /> */}
               {/* <img src="" alt="" srcset="" /> */}
               <div className="text-left ">
                 <h3 className="text-4xl font-semibold leading-normal text-blueGray-700 ">
