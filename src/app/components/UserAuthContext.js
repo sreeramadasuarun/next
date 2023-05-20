@@ -10,13 +10,13 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import { auth, database } from "./firebase";
-import { collection, setDoc, doc, getDocs } from "firebase/firestore";
+import { collection, setDoc, doc, getDocs, getDoc } from "firebase/firestore";
 
 const userAuthContext = createContext();
 
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
-  console.log(user);
+  // console.log(user);
   const collectRef = collection(database, "users");
   // // const q = query(collectRef, where(id, "==", user.uid));
   // // console.log(user.uid);
@@ -64,18 +64,14 @@ export function UserAuthContextProvider({ children }) {
 
   const [show, setShow] = useState("");
 
-  const getData = () => {
-    const docRef = collection(database, "users");
-
-    getDocs(docRef).then((response) => {
-      const getfrom = response.docs.map((item) => {
-        return { ...item.data(), key: item.id };
-      });
-      setShow(getfrom);
-    });
+  const getData = async () => {
+    const docRef = doc(database, "users", user.uid);
+    const docSnap = await getDoc(docRef);
+    const Snapdata = docSnap.data();
+    setShow(Snapdata);
   };
 
-  console.log(show);
+  console.log(show.fullname);
   // useEffect(() => {}, []);
   getData();
 
@@ -132,7 +128,7 @@ export function UserAuthContextProvider({ children }) {
   return (
     <userAuthContext.Provider
       value={{
-        getData,
+        // getData,
         show,
         handleSubmit,
         user,
