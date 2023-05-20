@@ -12,8 +12,7 @@ import Link from "next/link";
 import { useUserAuth } from "../components/UserAuthContext";
 
 export default function TopBar({ showNav, setShowNav }) {
-  const { user, show, getData, logOut } = useUserAuth();
-  // getData();
+  const { user } = useUserAuth();
 
   return (
     <div

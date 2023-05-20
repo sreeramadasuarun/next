@@ -39,7 +39,7 @@ export function UserAuthContextProvider({ children }) {
       about: about,
     });
 
-    console.log("Document written with ID: ", docRef.id);
+    // console.log("Document written with ID: ", docRef.id);
   }
 
   //.........  //pull from firebase
@@ -72,7 +72,7 @@ export function UserAuthContextProvider({ children }) {
     setShow(docSnap.data());
     // console.log("Document data:", docSnap.data());
   }
-  console.log(show);
+  // console.log(show);
   getData();
   // useEffect(() => {
   //   setInterval(() => {

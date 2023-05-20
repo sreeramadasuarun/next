@@ -10,8 +10,7 @@ import { useUserAuth } from "../components/UserAuthContext";
 const SideBar = forwardRef(({ showNav }, ref) => {
   const router = useRouter();
 
-  const { user, show, getData, logOut } = useUserAuth();
-  getData();
+  const { user, logOut } = useUserAuth();
 
   const handleSignOut = async () => {
     try {
