@@ -44,8 +44,8 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <body className="flex flex-col">
-          <UserAuthContextProvider>
+        <UserAuthContextProvider>
+          <body className="flex flex-col">
             <>
               <TopBar showNav={showNav} setShowNav={setShowNav} />
               <Transition
@@ -69,8 +69,8 @@ export default function RootLayout({ children }) {
             >
               {children}
             </main>
-          </UserAuthContextProvider>
-        </body>
+          </body>
+        </UserAuthContextProvider>
       </html>
     </>
   );
