@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
       setIsMobile(false);
     }
   }
-  useEffect(() => {
-    <TopBar />;
-  });
+  // useEffect(() => {
+  //   <TopBar />;
+  // });
 
   useEffect(() => {
     if (typeof window != undefined) {
