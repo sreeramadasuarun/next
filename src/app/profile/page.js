@@ -8,7 +8,6 @@ const Profile = () => {
   const router = useRouter();
 
   const { user, show } = useUserAuth();
-
   // console.log(show);
   // console.log(show.fullname);
 

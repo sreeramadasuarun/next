@@ -17,7 +17,7 @@ const userAuthContext = createContext();
 export function UserAuthContextProvider({ children }) {
   const [user, setUser] = useState({});
   // console.log(user);
-  const collectRef = collection(database, "users");
+  // const collectRef = collection(database, "users");
   // // const q = query(collectRef, where(id, "==", user.uid));
   // // console.log(user.uid);
 
@@ -44,53 +44,31 @@ export function UserAuthContextProvider({ children }) {
 
   //.........  //pull from firebase
 
-  // // const [show, setShow] = useState("");
+  // const [show, setShow] = useState("");
 
-  // const getData = () => {
-  //   const docRef = doc(database, "users", user.uid);
-
-  //   getDocs(docRef).then((response) => {
-  //     console.log(
-  //       response.docs.map((item) => {
-  //         return { ...item.data(), id: item.id };
-  //       })
-  //     );
+  // const getData = async () => {
+  //   await getDocs(collection(database, "users", user.uid)).then((response) => {
+  //     const getuser = response.docs.map((item) => {
+  //       return { ...item.data(), id: item.id };
+  //     });
+  //     setShow(getuser);
   //   });
   // };
 
-  // console.log(user.uid);
+  // console.log(show);
+
   // getData();
-  // useEffect(() => {}, []);
 
   const [show, setShow] = useState("");
 
-  const getData = async () => {
+  async function getData() {
     const docRef = doc(database, "users", user.uid);
     const docSnap = await getDoc(docRef);
-    const Snapdata = docSnap.data();
-    setShow(Snapdata);
-  };
-
-  console.log(show.fullname);
-  // useEffect(() => {}, []);
+    setShow(docSnap.data());
+    // console.log("Document data:", docSnap.data());
+  }
+  console.log(show);
   getData();
-
-  //.........  //pull from firebase
-
-  // const [show, setShow] = useState("");
-
-  // async function getData() {
-  //   const docRef = doc(database, "users", user.uid);
-  //   const docSnap = await getDoc(docRef);
-  //   setShow(docSnap.data());
-  //   console.log("Document data:", docSnap.data());
-  // }
-
-  // getData();
-  // useEffect(() => {
-  //   setInterval(() => {
-  //   }, 1500);
-  // }, []);
 
   // .................................
   function logIn(email, password) {

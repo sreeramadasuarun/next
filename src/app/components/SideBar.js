@@ -1,7 +1,7 @@
 "use client";
 import { forwardRef } from "react";
 import React, { useState } from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import { HomeIcon, CreditCardIcon, UserIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
 import { VscArchive, VscPersonAdd, VscGear } from "react-icons/vsc";
@@ -27,13 +27,13 @@ const SideBar = forwardRef(({ showNav }, ref) => {
           <section className="  z-50 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 ">
             <div className="w-[11rem]">
               <div className="mt-5 px-6 py-4 -ml-[1rem] ">
-                <a href="./" title="home">
+                <Link href="./" title="home">
                   <img
                     src="https://streamsss.com/wp-content/themes/streamsss/assets/images/logo/logo-head.png"
                     className="w-[11rem] "
                     alt="tailus logo"
                   />
-                </a>
+                </Link>
                 <p className="font-semibold	text-slate-400	tracking-wide	  py-4 text-left">
                   Dashboard
                 </p>
@@ -43,13 +43,13 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                 <ul className="space-y-2 tracking-wide mt-2 bg-slate-100 rounded-xl	 ">
                   {user.email === "user@gmail.com" ? (
                     <>
-                      <a
+                      <Link
                         href="/profile"
                         className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
-                      </a>
+                      </Link>
                     </>
                   ) : (
                     " "
@@ -57,47 +57,47 @@ const SideBar = forwardRef(({ showNav }, ref) => {
 
                   {user.email === "teamleader@gmail.com" ? (
                     <>
-                      <a
+                      <Link
                         href="/profile"
                         className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/employees"
                         className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscArchive />
                         <span className="font-semibold ml-5">Employees</span>
-                      </a>
+                      </Link>
                     </>
                   ) : (
                     " "
                   )}
                   {user.email === "superadmin@gmail.com" ? (
                     <>
-                      <a
+                      <Link
                         href="/profile"
                         className="relative tracking-widest		 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscPersonAdd />
                         <span className="font-semibold ml-5">Profile</span>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/employees"
                         className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscArchive />
                         <span className="font-semibold ml-5">Employees</span>
-                      </a>
-                      <a
+                      </Link>
+                      <Link
                         href="/teamleader"
                         className="relative tracking-widest	 flex items-center space-x-4 rounded-xl text-gray-600 hover:text-white hover:bg-gradient-to-r from-sky-600 to-cyan-400 py-1 px-3"
                       >
                         <VscGear />
                         <span className="font-semibold ml-5">Team Leaders</span>
-                      </a>
+                      </Link>
                     </>
                   ) : (
                     " "
@@ -126,13 +126,13 @@ const SideBar = forwardRef(({ showNav }, ref) => {
                     />
                   </svg>
 
-                  <a
+                  <Link
                     onClick={handleSignOut}
                     href="/logout"
                     className="group-hover:text-gray-700 "
                   >
                     Logout
-                  </a>
+                  </Link>
                 </button>
               </div>
             )}
