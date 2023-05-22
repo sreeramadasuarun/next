@@ -29,11 +29,11 @@ const Profile = () => {
               {/* <img src="" alt="" srcset="" /> */}
               <div className="text-left ">
                 <h3 className="text-4xl font-semibold leading-normal text-blueGray-700 ">
-                  {user
+                  {/* {user
                     ? show
                       ? show.fullname
                       : "Loading...."
-                    : "login for details"}
+                    : "login for details"} */}
                 </h3>
                 <div className="text-sm leading-normal text-blueGray-400 font-bold uppercase">
                   {user
